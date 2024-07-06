@@ -714,12 +714,11 @@ require("lazy").setup({
 	"brenoprata10/nvim-highlight-colors",
 
 	{
-		"catppuccin/nvim",
-		name = "catppuccin",
+		"miikanissi/modus-themes.nvim",
 		priority = 1000,
 
 		init = function()
-			vim.cmd.colorscheme("catppuccin-mocha")
+			vim.cmd.colorscheme("modus")
 		end,
 	},
 
