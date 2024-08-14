@@ -106,7 +106,10 @@ vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper win
 -- Key mapping for :tabnew
 vim.keymap.set("n", "<leader>t", ":tabnew<CR>", { silent = true })
 
--- Key mapping for :tabnext
+-- Paste last yanked text
+vim.keymap.set("n", "<leader>P", '"0p', { silent = true })
+
+-- mapping for :tabnext
 vim.keymap.set("n", "<leader>n", ":tabnext<CR>", { silent = true })
 
 -- Explore
