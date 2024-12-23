@@ -109,8 +109,11 @@ vim.keymap.set("n", "<leader>t", ":tabnew<CR>", { silent = true })
 -- Paste last yanked text
 vim.keymap.set("n", "<leader>P", '"0p', { silent = true })
 
--- mapping for :tabnext
-vim.keymap.set("n", "<leader>n", ":tabnext<CR>", { silent = true })
+-- mapping for next tab
+vim.keymap.set("n", "<leader>m", "gt", { silent = true })
+
+-- mapping for prevous tab
+vim.keymap.set("n", "<leader>n", "gT", { silent = true })
 
 -- Explore
 vim.keymap.set("n", "<leader>i", ":Ex<CR>", { noremap = true, silent = true })
