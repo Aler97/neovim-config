@@ -121,6 +121,14 @@ vim.keymap.set("n", "<leader>i", ":Ex<CR>", { noremap = true, silent = true })
 -- Open terminal window
 vim.keymap.set("n", "<C-t>", ":terminal<CR>", { noremap = true })
 
+-- Open small terminal window at bottom
+vim.keymap.set("n", "T", function()
+	vim.cmd("split")
+	vim.cmd("resize 10")
+	vim.cmd("terminal")
+	vim.cmd("startinsert")
+end, { noremap = true, silent = true })
+
 -- Toggle previous file
 vim.keymap.set("n", "<leader>;", "<C-^>", { noremap = true, desc = "Toggle previous file" })
 
@@ -200,8 +208,6 @@ require("lazy").setup({
 	},
 
 	{ "wuelnerdotexe/vim-astro" },
-
-	{ "prettier/vim-prettier" },
 
 	{
 		"nvim-lualine/lualine.nvim",
@@ -595,6 +601,7 @@ require("lazy").setup({
 				html = { "prettier" },
 				javascript = { "prettier" },
 				typescript = { "prettier" },
+				astro = { "prettier" },
 				-- Conform can also run multiple formatters sequentially
 				-- python = { "isort", "black" },
 				--
