@@ -121,6 +121,16 @@ vim.keymap.set("n", "<leader>i", ":Ex<CR>", { noremap = true, silent = true })
 -- Open terminal window
 vim.keymap.set("n", "<C-t>", ":terminal<CR>", { noremap = true })
 
+-- Git changes
+vim.keymap.set("n", "<leader>g", function()
+	local fugitive_window = vim.fn.bufwinnr("fugitive://")
+	if fugitive_window > 0 then
+		vim.cmd("close")
+	else
+		vim.cmd("G")
+	end
+end, { noremap = true, desc = "Toggle Git" })
+
 -- Open small terminal window at bottom
 vim.keymap.set("n", "T", function()
 	vim.cmd("split")
