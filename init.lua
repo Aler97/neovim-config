@@ -122,7 +122,7 @@ vim.keymap.set("n", "<leader>i", ":Ex<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<C-t>", ":terminal<CR>", { noremap = true })
 
 -- Git changes
-vim.keymap.set("n", "<leader>g", function()
+vim.keymap.set("n", "<leader>gg", function()
 	local fugitive_window = vim.fn.bufwinnr("fugitive://")
 	if fugitive_window > 0 then
 		vim.cmd("close")
@@ -130,6 +130,12 @@ vim.keymap.set("n", "<leader>g", function()
 		vim.cmd("G")
 	end
 end, { noremap = true, desc = "Toggle Git" })
+
+-- Git commit template
+vim.keymap.set("n", "<leader>go", ':G commit -m "', { noremap = true, desc = "Git commit template" })
+
+-- Git pull template
+vim.keymap.set("n", "<leader>gp", ":G pull", { noremap = true, desc = "Git pull template" })
 
 -- Open small terminal window at bottom
 vim.keymap.set("n", "T", function()
