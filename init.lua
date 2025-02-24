@@ -135,7 +135,7 @@ end, { noremap = true, desc = "Toggle Git" })
 vim.keymap.set("n", "<leader>go", ':G commit -m "', { noremap = true, desc = "Git commit template" })
 
 -- Git pull template
-vim.keymap.set("n", "<leader>gp", ":G pull", { noremap = true, desc = "Git pull template" })
+vim.keymap.set("n", "<leader>gp", ":G pull<CR>", { noremap = true, desc = "Git pull template" })
 
 -- Open small terminal window at bottom
 vim.keymap.set("n", "T", function()
