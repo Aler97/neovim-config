@@ -137,6 +137,9 @@ vim.keymap.set("n", "<leader>go", ':G commit -m "', { noremap = true, desc = "Gi
 -- Git pull template
 vim.keymap.set("n", "<leader>gp", ":G pull<CR>", { noremap = true, desc = "Git pull template" })
 
+-- Git push template
+vim.keymap.set("n", "<leader>gu", ":G push<CR>", { noremap = true, desc = "Git push template" })
+
 -- Open small terminal window at bottom
 vim.keymap.set("n", "T", function()
 	vim.cmd("split")
