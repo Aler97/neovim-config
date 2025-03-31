@@ -115,8 +115,8 @@ vim.keymap.set("n", "<leader>m", "gt", { silent = true })
 -- mapping for prevous tab
 vim.keymap.set("n", "<leader>n", "gT", { silent = true })
 
--- Explore
-vim.keymap.set("n", "<leader>i", ":Ex<CR>", { noremap = true, silent = true })
+-- Parent dir
+vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 
 -- Open terminal window
 vim.keymap.set("n", "<C-t>", ":terminal<CR>", { noremap = true })
@@ -828,6 +828,18 @@ require("lazy").setup({
 				-- Configuration here, or leave empty to use defaults
 			})
 		end,
+	},
+
+	{
+		"stevearc/oil.nvim",
+		---@module 'oil'
+		---@type oil.SetupOpts
+		opts = {},
+		-- Optional dependencies
+		-- dependencies = { { "echasnovski/mini.icons", opts = {} } },
+		dependencies = { "nvim-tree/nvim-web-devicons" }, -- use if you prefer nvim-web-devicons
+		-- Lazy loading is not recommended because it is very tricky to make it work correctly in all situations.
+		lazy = false,
 	},
 
 	-- Highlight todo, notes, etc in comments
